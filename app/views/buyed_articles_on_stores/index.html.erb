@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Buyed Articles On Stores</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Buying</th>
+      <th>Store has article</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @buyed_articles_on_stores.each do |buyed_articles_on_store| %>
+      <tr>
+        <td><%= buyed_articles_on_store.quantity %></td>
+        <td><%= buyed_articles_on_store.buying %></td>
+        <td><%= buyed_articles_on_store.store_has_article %></td>
+        <td><%= link_to 'Show', buyed_articles_on_store %></td>
+        <td><%= link_to 'Edit', edit_buyed_articles_on_store_path(buyed_articles_on_store) %></td>
+        <td><%= link_to 'Destroy', buyed_articles_on_store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Buyed Articles On Store', new_buyed_articles_on_store_path %>

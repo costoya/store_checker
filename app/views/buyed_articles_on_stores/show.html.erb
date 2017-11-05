@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @buyed_articles_on_store.quantity %>
+</p>
+
+<p>
+  <strong>Buying:</strong>
+  <%= @buyed_articles_on_store.buying %>
+</p>
+
+<p>
+  <strong>Store has article:</strong>
+  <%= @buyed_articles_on_store.store_has_article %>
+</p>
+
+<%= link_to 'Edit', edit_buyed_articles_on_store_path(@buyed_articles_on_store) %> |
+<%= link_to 'Back', buyed_articles_on_stores_path %>
