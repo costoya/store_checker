@@ -1,0 +1,2 @@
+module StoreHasArticlesHelper
+end

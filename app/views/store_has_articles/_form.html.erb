@@ -1,0 +1,32 @@
+<%= form_with(model: store_has_article, local: true) do |form| %>
+  <% if store_has_article.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(store_has_article.errors.count, "error") %> prohibited this store_has_article from being saved:</h2>
+
+      <ul>
+      <% store_has_article.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url, id: :store_has_article_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :store_id %>
+    <%= form.text_field :store_id, id: :store_has_article_store_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :article_id %>
+    <%= form.text_field :article_id, id: :store_has_article_article_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
