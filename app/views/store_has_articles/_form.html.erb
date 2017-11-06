@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price, id: :store_has_article_price %>
+  </div>
+
+  <div class="field">
     <%= form.label :store_id %>
     <%= form.text_field :store_id, id: :store_has_article_store_id %>
   </div>

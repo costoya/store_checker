@@ -4,11 +4,12 @@
   <strong>Buying date:</strong>
   <%= @buying.buying_date %>
   <table>
-    <tr><td><strong>Store name</strong></td><td><strong>Article name</strong></td><td><strong>Quantity</strong></td></tr>
+    <tr><td><strong>Store name</strong></td><td><strong>Article name</strong></td><td><strong>Price</strong></td><td><strong>Quantity</strong></td></tr>
   <% @buying.buyed_articles_on_store.each do |article_buyed| %>
       <tr>
         <td><%= article_buyed.store_has_article.store.name%></td>
         <td><%= article_buyed.store_has_article.article.name%></td>
+        <td><%= article_buyed.store_has_article.price%></td>
         <td><%= article_buyed.quantity %></td>
       </tr>
   <% end %>

@@ -17,7 +17,7 @@ class StoreHasArticlesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create store_has_article" do
     assert_difference('StoreHasArticle.count') do
-      post store_has_articles_url, params: { store_has_article: { article_id: @store_has_article.article_id, store_id: @store_has_article.store_id, url: @store_has_article.url } }
+      post store_has_articles_url, params: { store_has_article: { article_id: @store_has_article.article_id, price: @store_has_article.price, store_id: @store_has_article.store_id, url: @store_has_article.url } }
     end
 
     assert_redirected_to store_has_article_url(StoreHasArticle.last)
@@ -34,7 +34,7 @@ class StoreHasArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update store_has_article" do
-    patch store_has_article_url(@store_has_article), params: { store_has_article: { article_id: @store_has_article.article_id, store_id: @store_has_article.store_id, url: @store_has_article.url } }
+    patch store_has_article_url(@store_has_article), params: { store_has_article: { article_id: @store_has_article.article_id, price: @store_has_article.price, store_id: @store_has_article.store_id, url: @store_has_article.url } }
     assert_redirected_to store_has_article_url(@store_has_article)
   end
 

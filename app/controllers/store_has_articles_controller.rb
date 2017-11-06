@@ -69,6 +69,6 @@ class StoreHasArticlesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def store_has_article_params
-      params.require(:store_has_article).permit(:url, :store_id, :article_id)
+      params.require(:store_has_article).permit(:url, :price, :store_id, :article_id)
     end
 end

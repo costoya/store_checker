@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :buyed_articles_on_stores
   resources :store_has_articles
+  resources :buyed_articles_on_stores
   resources :buyings
   resources :articles
   resources :stores
